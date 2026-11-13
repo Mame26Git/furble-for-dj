@@ -2,50 +2,50 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>Furby Web Bluetooth For Popstar</title>
+    <title>FURBL3 F0R DJ</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='furble.css'>
 </head>
 <body>
 
 <!-- for slide-in status messages -->
-<div id='status' class='ok'>Connected!</div>
+<div id='status' class='ok'>C0NN3CT3D!</div>
 
 <!-- menu button and menu -->
 <button id='hamburger'>☰</button>
 <div id='menu'>
-    <h2>FurBLE For Popstar</h2>
+    <h2>FURBL3 F0R DJ</h2>
     <ul>
-        <li><a href='#actions'>Actions</a></li>
-        <li><a href='#misc'>Misc</a></li>
-        <li><a href='#dlc'>DLC Upload</a></li>
-        <li><a href='#sensors'>Sensors</a></li>
-        <li><a href='#debug'>Debug</a></li>
+        <li><a href='#actions'>ACT1ONS</a></li>
+        <li><a href='#misc'>M1SC</a></li>
+        <li><a href='#dlc'>DLC UPL0AD</a></li>
+        <li><a href='#sensors'>S3NS0RS</a></li>
+        <li><a href='#debug'>D3BUG</a></li>
     </ul>
 </div>
 
 
 <div class='header'>
         <button id='connbtn' onclick='doConnectDisconnect()'>Connect</button>
-    <div><h1>FurBLE For Popstar</h1>
-    <span id='state'>Not connected</span></div>
+    <div><h1>FURBL3 F0R DJ</h1>
+    <span id='state'>N0T C0NN3CT3D</span></div>
     
 </div>
 
 <div id='furby-buttons'>
 
     <section id='misc'>
-        <h2>Antenna Colour</h2>
+        <h2>ANT3NNA C0L0R</h2>
         <div class='row'>
-            <button onclick='setAntennaColor(255, 0,0)'>Red</button>
-            <button onclick='setAntennaColor(0, 255,0)'>Green</button>
-            <button onclick='setAntennaColor(0, 0, 255)'>Blue</button>
-            <button onclick='setAntennaColor(255, 255, 255)'>White</button>
+            <button onclick='setAntennaColor(255, 0,0)'>R3D</button>
+            <button onclick='setAntennaColor(0, 255,0)'>GR33N</button>
+            <button onclick='setAntennaColor(0, 0, 255)'>BLU3</button>
+            <button onclick='setAntennaColor(255, 255, 255)'>WH1TW</button>
         </div>
     </section>
 
     <section id='actions'>
-        <h2>Action Sequences</h2>
+        <h2>ACT1ON S3QU1ENC3S</h2>
         <div class='row' id='dlc-actions'></div>
         <div class='row'>
             <button onclick='triggerAction(39,3,8,1)'>Oh Sweet Legendary Thing!</button>
@@ -63,30 +63,30 @@
     </section>
 
     <section id='debug'>
-        <h2>Debug</h2>
+        <h2>D3BUG</h2>
         <div class='row'>
-            <button onclick='cycleDebug()'>Eye Debug</button>
-            <button onclick='enableEyes(false)'>Eyes off</button>
-            <button onclick='enableEyes(true)'>Eyes on</button>
+            <button onclick='cycleDebug()'>3Y3 D3BUG</button>
+            <button onclick='enableEyes(false)'>3Y35 0FF</button>
+            <button onclick='enableEyes(true)'>3Y35 0N</button>
         </div>
     </section>
 
     <section id='dlc'>
-        <h2>DLC Files</h2>
+        <h2>DLC F1L3S</h2>
         <div class='row'>
             <select id='dlcname'></select>
-            <h3>Not supported for Popstar.</h3>
+            <h3>Not supported for DJ.</h3>
         </div>
     </section>
 
     <section id='sensors'>
-        <h2>Sensors</h2>
+        <h2>53NS0R5</h2>
         <!--<div class='row'>
                 <button onclick='sendGPCmd([0x20, 0x0d])'>Start continuous</button>
                 <button onclick='sendGPCmd([0x20, 0x0e])'>Stop continuous</button>
         </div>
         <h2>State</h2>-->
-        <ul id='sensor-state'><li>Waiting for connection...</li></ul>
+        <ul id='sensor-state'><li>WA1T1NG F0R C0NN3CT10N...</li></ul>
     </section>
 
     <section id='no-web-bluetooth'>
@@ -187,7 +187,7 @@ async function loadDLCIndex() {
 async function dlcUploadClicked() {
     let dlcfile = dlcsel.options[dlcsel.selectedIndex].value;
     let params = dlcdata[dlcfile];
-    console.log('DLC upload clicked', params);
+    console.log('DLC UPL0AD CL1CK3D', params);
     await fetchAndUploadDLC('dlc/'+dlcfile);
     setupDLCButtons(params);
     showSection('actions');
@@ -200,7 +200,7 @@ function setupDLCButtons(dlcParams) {
         let button = document.createElement('button');
         button.textContent = p.title;
         button.onclick = () => {
-            log('Triggering ' + p.title + ' for dlc ' + dlcParams.file);
+            log('TR1GG3R1NG ' + p.title + ' F0R DLC ' + dlcParams.file);
             triggerAction.apply(null, p.action);
         };
         container.appendChild(button);
@@ -212,7 +212,7 @@ function log2clipboard() {
     range.selectNode(out);
     window.getSelection().addRange(range);
     document.execCommand('copy');
-    msg.ok('Copied to clipboard');
+    msg.ok('C0P13D T0 CL1PB0ARD');
 }
 
 </script>
