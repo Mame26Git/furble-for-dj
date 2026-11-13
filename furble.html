@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>Furby Web Bluetooth</title>
+    <title>FurBLE for DJ</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='furble.css'>
 </head>
@@ -14,13 +14,14 @@
 <!-- menu button and menu -->
 <button id='hamburger'>☰</button>
 <div id='menu'>
-    <h2>FurBLE</h2>
+    <h2>FurBLE for DJ</h2>
     <ul>
         <li><a href='#actions'>Actions</a></li>
         <li><a href='#misc'>Misc</a></li>
         <li><a href='#dlc'>DLC Upload</a></li>
         <li><a href='#sensors'>Sensors</a></li>
         <li><a href='#debug'>Debug</a></li>
+        <li><a href='#personality'>Personality</a></li>
     </ul>
 </div>
 
@@ -29,7 +30,7 @@
         <button id='connbtn' onclick='doConnectDisconnect()'>Connect</button>
         <button id='addbtn' onclick='doAddFurby()'>Add another Furby</button>
         <select id='sendto' onchange='setSendTarget(this.value)'><option value='all'>All Furbys</option></select>
-    <div><h1>FurBLE</h1>
+    <div><h1>FurBLE for DJ</h1>
     <span id='state'>Not connected</span></div>
     
 </div>
