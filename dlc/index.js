@@ -5,5 +5,12 @@
         "buttons": [
             { "title": "test ", "DJ": [73,0,0,1] }
         ]
+    },
+    {
+        "file": "ll8ah3.dlc", 
+        "title": "use if you dont have one2",
+        "buttons": [
+            { "title": "test ", "DJ": [73,0,0,1] }
+        ]
     }
 ]
