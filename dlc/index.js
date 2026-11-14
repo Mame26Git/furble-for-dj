@@ -1,4 +1,5 @@
-{
+[
+  {
         "file": "PERS.dlc", 
         "title": "use if you dont have one",
         "buttons": [
