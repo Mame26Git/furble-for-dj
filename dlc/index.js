@@ -14,7 +14,7 @@
         ]
     },
     {
-        "file": "furby_voice.dlc", 
+        "file": "voice.dlc", 
         "title": "use if you dont want dj",
         "buttons": [
             { "title": "test ", "rickroll": [75,0,3,7] }
